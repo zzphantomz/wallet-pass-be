@@ -10,7 +10,10 @@ import {
 import type { ConfigType } from '@nestjs/config';
 import { PKPass } from 'passkit-generator';
 import sharp from 'sharp';
-import { walletPassConfig } from '../config/wallet-pass.config.js';
+import {
+  type CertSource,
+  walletPassConfig,
+} from '../config/wallet-pass.config.js';
 import type { TicketDetailDto } from './dto/ticket-detail.dto.js';
 import { renderPassJson } from './pass-template.js';
 import { PassTier, TIER_COLORS } from './pass-tier.js';
@@ -78,13 +81,14 @@ export class WalletPassService implements OnModuleInit {
   }
 
   private async loadCertificates() {
-    const { signerCertPath, signerKeyPath, wwdrPath, signerKeyPassphrase } =
-      this.config;
+    const { certificates, signerKeyPassphrase } = this.config;
     try {
       const [signerCert, signerKey, wwdr] = await Promise.all(
-        [signerCertPath, signerKeyPath, wwdrPath].map((p) =>
-          readFile(path.resolve(p)),
-        ),
+        [
+          certificates.signerCert,
+          certificates.signerKey,
+          certificates.wwdr,
+        ].map(readCert),
       );
       return { signerCert, signerKey, wwdr, signerKeyPassphrase };
     } catch (error) {
@@ -108,6 +112,11 @@ export class WalletPassService implements OnModuleInit {
       return undefined;
     }
   }
+}
+
+async function readCert(source: CertSource): Promise<Buffer> {
+  if (source.base64) return Buffer.from(source.base64, 'base64');
+  return readFile(path.resolve(source.path));
 }
 
 async function readDirBuffers(root: string): Promise<Buffers> {

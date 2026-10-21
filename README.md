@@ -27,6 +27,16 @@ pnpm start:dev
 `.p12` phải chứa cert Pass Type ID `pass.fanos.social.fandom.loyalty.pass` kèm private key.
 Script tự tải Apple WWDR G4. Chưa có cert thì app vẫn chạy nhưng endpoint trả `503`.
 
+## Deploy cert
+
+Không commit `certs/*.pem` (đã gitignore). Trên server, set 3 secret env thay cho file:
+
+```bash
+./scripts/certs-to-env.sh   # in ra WALLET_PASS_{SIGNER_CERT,SIGNER_KEY,WWDR}_BASE64=...
+```
+
+Nếu có `*_BASE64` thì app dùng nó, nếu không thì đọc file theo `WALLET_PASS_SIGNER_CERT` / `_KEY` / `_WWDR`.
+
 ## API
 
 | Method | Path | Body | Query |
