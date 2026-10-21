@@ -1,0 +1,128 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.fanos.social.fandom.loyalty.pass",
+  "teamIdentifier": "TYZMF28LVJ",
+  "organizationName": "FanOS",
+  "description": "{{ticket.showTitle}}",
+  "serialNumber": "{{ticket.id}}",
+  "groupingIdentifier": "{{ticket.sessionId}}",
+  "logoText": "FanOS",
+  "backgroundColor": "rgb(255, 255, 255)",
+  "foregroundColor": "rgb(28, 28, 30)",
+  "labelColor": "rgb(142, 142, 147)",
+  "sharingProhibited": true,
+  "relevantDate": "{{ticket.startsAt}}",
+  "expirationDate": "{{ticket.endsAt}}",
+  "voided": false,
+  "barcodes": [
+    {
+      "format": "PKBarcodeFormatQR",
+      "message": "{{ticket.qr.payload}}",
+      "messageEncoding": "iso-8859-1",
+      "altText": "{{ticket.code}}"
+    }
+  ],
+  "eventTicket": {
+    "headerFields": [
+      {
+        "key": "seat",
+        "label": "SEAT",
+        "value": "{{seatDisplay}}",
+        "textAlignment": "PKTextAlignmentRight"
+      }
+    ],
+    "primaryFields": [
+      {
+        "key": "event",
+        "label": "EVENT",
+        "value": "{{ticket.showTitle}}"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "time",
+        "label": "TIME",
+        "value": "{{ticket.startsAt}}",
+        "dateStyle": "PKDateStyleMedium",
+        "timeStyle": "PKDateStyleShort"
+      },
+      {
+        "key": "venue",
+        "label": "VENUE",
+        "value": "{{ticket.venueName}}",
+        "textAlignment": "PKTextAlignmentRight"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "ticketType",
+        "label": "TICKET_TYPE",
+        "value": "{{ticket.ticketTypeName}}"
+      },
+      {
+        "key": "zone",
+        "label": "ZONE",
+        "value": "{{ticket.zoneName}}"
+      },
+      {
+        "key": "session",
+        "label": "SESSION",
+        "value": "{{ticket.sessionName}}",
+        "textAlignment": "PKTextAlignmentRight"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "code",
+        "label": "TICKET_CODE",
+        "value": "{{ticket.code}}"
+      },
+      {
+        "key": "orderId",
+        "label": "ORDER_ID",
+        "value": "{{ticket.orderId}}"
+      },
+      {
+        "key": "address",
+        "label": "ADDRESS",
+        "value": "{{addressText}}"
+      },
+      {
+        "key": "perks",
+        "label": "PERKS",
+        "value": "{{perksText}}"
+      },
+      {
+        "key": "payment",
+        "label": "PAYMENT",
+        "value": "{{paymentText}}"
+      },
+      {
+        "key": "terms",
+        "label": "TERMS",
+        "value": "{{ticket.ticketTypeTerms}}",
+        "attributedValue": "<a href='{{ticket.termsLink}}'>{{ticket.termsLink}}</a>"
+      },
+      {
+        "key": "support",
+        "label": "SUPPORT",
+        "value": "hi@fanos.vn"
+      }
+    ]
+  },
+  "semantics": {
+    "eventType": "PKEventTypeLivePerformance",
+    "eventName": "{{ticket.showTitle}}",
+    "eventStartDate": "{{ticket.startsAt}}",
+    "eventEndDate": "{{ticket.endsAt}}",
+    "venueName": "{{ticket.venueName}}",
+    "seats": [
+      {
+        "seatSection": "{{ticket.zoneName}}",
+        "seatRow": "{{ticket.seatRowLabel}}",
+        "seatNumber": "{{ticket.seatLabel}}",
+        "seatType": "{{ticket.ticketTypeName}}"
+      }
+    ]
+  }
+}

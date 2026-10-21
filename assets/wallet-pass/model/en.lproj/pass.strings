@@ -1,0 +1,14 @@
+"SEAT" = "Seat";
+"EVENT" = "Event";
+"TIME" = "Time";
+"VENUE" = "Venue";
+"TICKET_TYPE" = "Ticket type";
+"ZONE" = "Zone";
+"SESSION" = "Session";
+"TICKET_CODE" = "Ticket code";
+"ORDER_ID" = "Order ID";
+"ADDRESS" = "Address";
+"PERKS" = "Perks";
+"PAYMENT" = "Payment";
+"TERMS" = "Terms & Conditions";
+"SUPPORT" = "Support";

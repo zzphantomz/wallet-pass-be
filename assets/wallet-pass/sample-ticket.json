@@ -1,0 +1,38 @@
+{
+  "id": "23c43389-3a3a-8237-a8f5-df869fa91db6",
+  "code": "ZQBGY8AQ42C8X95Q",
+  "status": "issued",
+  "checkedInAt": null,
+  "orderId": "01a15c5f-b5c7-7219-9365-409ddbbe3043",
+  "sessionId": "01a1427b-b3ca-715f-b4c0-7a7b7391f337",
+  "showId": "01a1427a-c5fe-7368-822a-481a615172bf",
+  "showTitle": "Event Fanos 2",
+  "showSlug": "event-fanoseven-2",
+  "sessionName": "DAY 1",
+  "startsAt": "2026-10-23T02:11:00.000Z",
+  "endsAt": "2026-10-23T06:11:00.000Z",
+  "venueName": "Mỹ Đình National Stadium",
+  "addressLine": "Le Duc Tho Street, Nam Tu Liem",
+  "city": "Hà Nội",
+  "imageHeroUrl": "https://i.pinimg.com/1200x/0e/20/e9/0e20e972aab1fed5d5569815512a472a.jpg",
+  "ticketTypeId": "01a142ba-2e6a-74e7-a48d-21183881a71a",
+  "ticketTypeName": "SVIP",
+  "zoneName": "Chổ ngồi",
+  "seatRowLabel": "A",
+  "seatLabel": "10",
+  "perks": [
+    "Khu vực trung tâm",
+    "+1000XP"
+  ],
+  "qrState": "active",
+  "qrRevealAt": null,
+  "termsLink": null,
+  "ticketTypeTerms": "• Vé chi có giá trị sử dụng một (01) lần cho một (01) người tham dự sự kiện vào đúng thời gian, địa điểm trên vé.\n﻿﻿• Khách hàng vui lòng xuất trình vé hợp lệ tại cổng check-in để được xác nhận tham dự.\n﻿﻿• Vé đã mua sẽ không được hoàn trả vì bất kỳ lý do nào, trừ khi sự kiện bị hủy do phát sinh từ Ban tổ chức. Các trường hợp hoãn/hủy sẽ được thông báo chính thức từ Ticketbox.\n﻿﻿﻿﻿• Người mua có trách nhiệm giữ gìn và bảo mật mã vé. Ticketbox không chịu trách nhiệm đối với cáo trường hợp mất mát, thất lạc hoặc bị sử dụng bởi bên thứ ba.\n﻿﻿﻿﻿• Bằng việc mua vé và tham gia sự kiện, quý khách đồng ý và cam kết tuân thủ các điều khoản và điều kiện được công bố chính thức từ Ticketbox và Ban tổ chức. Điều khoản và điều kiện có thể được cập nhật mà không cần thông báo trước.",
+  "paymentRef": "317814018298",
+  "paymentProvider": "vnpay",
+  "paymentMethod": "qr",
+  "qr": {
+    "ticketId": "23c43389-3a3a-8237-a8f5-df869fa91db6",
+    "payload": "eyJ0aWNrZXRJZCI6IjIzYzQzMzg5LTNhM2EtODIzNy1hOGY1LWRmODY5ZmE5MWRiNiIsImV2ZW50SWQiOiIwMWExNDI3Yi1iM2NhLTcxNWYtYjRjMC03YTdiNzM5MWYzMzciLCJ1c2VySWQiOiI2YWQ3MmE0MDU3MzQ2MmZkMjM5NzkzZGYiLCJzZWF0IjoiQTEwIiwidGllciI6IlNWSVAiLCJpc3N1ZWRBdCI6MTc5MjU1MTE0NSwiZXhwaXJlc0F0IjpudWxsfQ.d506b5b8f20a1cb9c4f2ea5dfebdc93c"
+  }
+}
